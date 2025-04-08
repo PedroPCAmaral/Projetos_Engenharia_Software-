@@ -1,26 +1,28 @@
-
-	
 #include <stdio.h>
 #include <locale.h>
 
+
 int main() {
-    int valor1, valor2;
-    
 	
 	setlocale(LC_ALL, "Portuguese");
 	
-	
+    int valor1, valor2;
+    
+    
 
     printf("Digite o primeiro valor: ");
     scanf("%d", &valor1);
 
-    printf("Digite o segundo valor: ");
-    scanf("%d", &valor2);
-
-    while (valor2 == 0) {
-        printf("VALOR INVALIDO! O segundo valor nao pode ser iguala zero. Informe outro valor: ");
+    do {
+        printf("Digite o segundo valor: ");
         scanf("%d", &valor2);
-    }
+        
+
+        if (valor2 == 0) {
+            printf("VALOR INVALIDO! O segundo valor nao pode ser zero.\n");
+        }
+        
+    } while (valor2 == 0);
 
     int resultado = valor1 / valor2;
     printf("Resultado da divisao: %d\n", resultado);

@@ -2,9 +2,8 @@
 
 int main() {
     for (int i = 1; i <= 10; i++) {
-        printf("%d ", i);
+        printf("8 x %d = %d\n", i, 8 * i);
     }
-    printf("\n");
 
     return 0;
 }

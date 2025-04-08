@@ -1,0 +1,261 @@
+[12:24, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    int valor;
+    std::cout << "Digite um valor: ";
+    std::cin >> valor;
+
+    if (valor > 10) {
+        std::cout << "É MAIOR QUE 10!" << std::endl;
+    } else {
+        std::cout << "NÃO É MAIOR QUE 10!" << std::endl;
+    }
+
+    return 0;
+}
+[12:24, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    int valor;
+    std::cout << "Digite um valor: ";
+    std::cin >> valor;
+
+    if (valor >= 0) {
+        std::cout << "O valor é positivo." << std::endl;
+    } else {
+        std::cout << "O valor é negativo." << std::endl;
+    }
+
+    return 0;
+}
+[12:24, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    int quantidade;
+    float preco;
+
+    std::cout << "Digite o número de maçãs compradas: ";
+    std::cin >> quantidade;
+
+    if (quantidade < 12) {
+        preco = 1.30;
+    } else {
+        preco = 1.00;
+    }
+
+    float custo_total = quantidade * preco;
+    std::cout << "O custo total é: R$" << custo_total << std::endl;
+
+    return 0;
+}
+[12:25, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    float nota1, nota2, media;
+
+    std::cout << "Digite a primeira nota: ";
+    std::cin >> nota1;
+
+    std::cout << "Digite a segunda nota: ";
+    std::cin >> nota2;
+
+    media = (nota1 + nota2) / 2.0;
+
+    if (media >= 7) {
+        std::cout << "Aprovado" << std::endl;
+    } else {
+        std::cout << "Não aprovado" << std::endl;
+    }
+
+    return 0;
+}
+[12:25, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    int anoAtual, anoNascimento, idade;
+
+    std::cout << "Digite o ano atual: ";
+    std::cin >> anoAtual;
+
+    std::cout << "Digite o ano de nascimento: ";
+    std::cin >> anoNascimento;
+
+    idade = anoAtual - anoNascimento;
+
+    if (idade >= 16) {
+        std::cout << "Pode votar este ano." << std::endl;
+    } else {
+        std::cout << "Não pode votar este ano." << std::endl;
+    }
+
+    return 0;
+}
+[12:25, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    int valor1, valor2;
+
+    std::cout << "Digite o primeiro valor: ";
+    std::cin >> valor1;
+
+    std::cout << "Digite o segundo valor: ";
+    std::cin >> valor2;
+
+    if (valor1 > valor2) {
+        std::cout << "O maior valor é: " << valor1 << std::endl;
+    } else {
+        std::cout << "O maior valor é: " << valor2 << std::endl;
+    }
+
+    return 0;
+}
+[12:25, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    int valor1, valor2;
+
+    std::cout << "Digite o primeiro valor: ";
+    std::cin >> valor1;
+
+    std::cout << "Digite o segundo valor: ";
+    std::cin >> valor2;
+
+    if (valor1 > valor2) {
+        std::cout << valor2 << ", " << valor1 << std::endl;
+    } else {
+        std::cout << valor1 << ", " << valor2 << std::endl;
+    }
+
+    return 0;
+}
+[12:26, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    int horaInicio, minutoInicio, horaFim, minutoFim;
+    int duracaoHoras, duracaoMinutos;
+
+    std::cout << "Digite a hora de início (24h): ";
+    std::cin >> horaInicio;
+
+    std::cout << "Digite o minuto de início: ";
+    std::cin >> minutoInicio;
+
+    std::cout << "Digite a hora de término (24h): ";
+    std::cin >> horaFim;
+
+    std::cout << "Digite o minuto de término: ";
+    std::cin >> minutoFim;
+
+    duracaoHoras = horaFim - horaInicio;
+    duracaoMinutos = minutoFim - minutoInicio;
+
+    if (duracaoMinutos < 0) {
+        duracaoMinutos += 60;
+        duracaoHoras--;
+    }
+
+    if (duracaoHoras < 0) {
+        duracaoHoras += 24;
+    }
+
+    std::cout << "A duração do jogo é: " << duracaoHoras << " horas e " << duracaoMinutos << " minutos." << std::endl;
+
+    return 0;
+}
+[12:26, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    float horasTrabalhadas, salarioHora, salarioTotal;
+
+    std::cout << "Digite o número de horas trabalhadas: ";
+    std::cin >> horasTrabalhadas;
+
+    std::cout << "Digite o valor do salário por hora: ";
+    std::cin >> salarioHora;
+
+    if (horasTrabalhadas > 40) {
+        salarioTotal = (40 * salarioHora) + ((horasTrabalhadas - 40) * salarioHora * 1.5);
+    } else {
+        salarioTotal = horasTrabalhadas * salarioHora;
+    }
+
+    std::cout << "O salário total é: R$" << salarioTotal << std::endl;
+
+    return 0;
+}
+[12:26, 01/09/2024] Pedro Amaral: #include <iostream>
+#include <string>
+
+int main() {
+    std::string nome;
+    char sexo;
+    float altura, pesoIdeal;
+
+    std::cout << "Digite o nome: ";
+    std::cin >> nome;
+
+    std::cout << "Digite a altura: ";
+    std::cin >> altura;
+
+    std::cout << "Digite o sexo (M para masculino, F para feminino): ";
+    std::cin >> sexo;
+
+    if (sexo == 'M' || sexo == 'm') {
+        pesoIdeal = (72.7 * altura) - 58;
+    } else if (sexo == 'F' || sexo == 'f') {
+        pesoIdeal = (62.1 * altura) - 44.7;
+    } else {
+        std::cout << "Sexo inválido" << std::endl;
+        return 1;
+    }
+
+    std::cout << nome << ", seu peso ideal é: " << pesoIdeal << " kg" << std::endl;
+
+    return 0;
+}
+[12:27, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    float salarioBase, vendas;
+    float comissao = 0.03, salarioFinal;
+
+    std::cout << "Digite o salário base: ";
+    std::cin >> salarioBase;
+
+    std::cout << "Digite o valor total das vendas: ";
+    std::cin >> vendas;
+
+    if (vendas > 1500.0) {
+        salarioFinal = salarioBase + (comissao * 1500) + ((vendas - 1500) * 0.05);
+    } else {
+        salarioFinal = salarioBase + (comissao * vendas);
+    }
+
+    std::cout << "O salário final é: R$" << salarioFinal << std::endl;
+
+    return 0;
+}
+[12:27, 01/09/2024] Pedro Amaral: #include <iostream>
+
+int main() {
+    float saldo, debito, credito, saldoAtual;
+
+    std::cout << "Digite o saldo inicial: ";
+    std::cin >> saldo;
+
+    std::cout << "Digite o valor do débito: ";
+    std::cin >> debito;
+
+    std::cout << "Digite o valor do crédito: ";
+    std::cin >> credito;
+
+    saldoAtual = saldo - debito + credito;
+
+    if (saldoAtual >= 0) {
+        std::cout << "Saldo Positivo" << std::endl;
+    } else {
+        std::cout << "Saldo Negativo" << std::endl;
+    }
+
+    return 0;
+}

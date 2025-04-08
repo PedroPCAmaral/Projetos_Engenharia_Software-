@@ -1,0 +1,393 @@
+[02:51, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int valor;
+    cout << "Digite um valor: ";
+    cin >> valor;
+    
+    if (valor > 10) {
+        cout << "É MAIOR QUE 10!" << endl;
+    } else {
+        cout << "NÃO É MAIOR QUE 10!" << endl;
+    }
+    
+    return 0;
+
+}
+
+
+[02:51, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int valor;
+    cout << "Digite um valor: ";
+    cin >> valor;
+    
+    if (valor >= 0) {
+        cout << "Positivo" << endl;
+    } else {
+        cout << "Negativo" << endl;
+    }
+    
+    return 0;
+}
+
+
+
+[02:52, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int quantidade;
+    double custo;
+    
+    cout << "Digite o número de maçãs compradas: ";
+    cin >> quantidade;
+    
+    if (quantidade < 12) {
+        custo = quantidade * 1.30;
+    } else {
+        custo = quantidade * 1.00;
+    }
+    
+    cout << "Custo total da compra: R$" << custo << endl;
+    
+    return 0;
+}
+
+
+
+[02:53, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double nota1, nota2, media;
+    
+    cout << "Digite a primeira nota: ";
+    cin >> nota1;
+    cout << "Digite a segunda nota: ";
+    cin >> nota2;
+    
+    media = (nota1 + nota2) / 2;
+    
+    cout << "Média: " << media << endl;
+    
+    if (media >= 7) {
+        cout << "Aluno aprovado" << endl;
+    } else {
+        cout << "Aluno não aprovado" << endl;
+    }
+    
+    return 0;
+}
+
+
+
+[02:53, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int anoAtual, anoNascimento, idade;
+    
+    cout << "Digite o ano atual: ";
+    cin >> anoAtual;
+    cout << "Digite o ano de nascimento: ";
+    cin >> anoNascimento;
+    
+    idade = anoAtual - anoNascimento;
+    
+    if (idade >= 16) {
+        cout << "Pode votar este ano" << endl;
+    } else {
+        cout << "Não pode votar este ano" << endl;
+    }
+    
+    return 0;
+}
+
+
+
+[02:54, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int valor1, valor2;
+    
+    cout << "Digite o primeiro valor: ";
+    cin >> valor1;
+    cout << "Digite o segundo valor: ";
+    cin >> valor2;
+    
+    if (valor1 > valor2) {
+        cout << "Maior valor: " << valor1 << endl;
+    } else {
+        cout << "Maior valor: " << valor2 << endl;
+    }
+    
+    return 0;
+}
+
+
+
+[02:55, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int valor1, valor2;
+    
+    cout << "Digite o primeiro valor: ";
+    cin >> valor1;
+    cout << "Digite o segundo valor: ";
+    cin >> valor2;
+    
+    if (valor1 < valor2) {
+        cout << valor1 << " " << valor2 << endl;
+    } else {
+        cout << valor2 << " " << valor1 << endl;
+    }
+    
+    return 0;
+}
+
+
+
+
+[02:56, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int valor1, valor2;
+    
+    cout << "Digite o primeiro valor: ";
+    cin >> valor1;
+    cout << "Digite o segundo valor: ";
+    cin >> valor2;
+    
+    if (valor1 < valor2) {
+        cout << valor1 << " " << valor2 << endl;
+    } else {
+        cout << valor2 << " " << valor1 << endl;
+    }
+    
+    return 0;
+}
+
+
+
+[02:57, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int horaInicio, horaFim, duracao;
+    
+    cout << "Digite a hora de início do jogo: ";
+    cin >> horaInicio;
+    cout << "Digite a hora de fim do jogo: ";
+    cin >> horaFim;
+    
+    if (horaFim >= horaInicio) {
+        duracao = horaFim - horaInicio;
+    } else {
+        duracao = (24 - horaInicio) + horaFim;
+    }
+    
+    cout << "Duração do jogo: " << duracao << " horas" << endl;
+    
+    return 0;
+}
+
+
+
+[02:57, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int horasTrabalhadas;
+    double salarioHora, salarioTotal, horasExtras = 0;
+    
+    cout << "Digite o número de horas trabalhadas no mês: ";
+    cin >> horasTrabalhadas;
+    cout << "Digite o salário por hora: ";
+    cin >> salarioHora;
+    
+    if (horasTrabalhadas > 160) {  // 160 horas = 40 horas x 4 semanas
+        horasExtras = horasTrabalhadas - 160;
+        salarioTotal = (160 * salarioHora) + (horasExtras * salarioHora * 1.5);
+    } else {
+        salarioTotal = horasTrabalhadas * salarioHora;
+    }
+    
+    cout << "Salário total: R$" << salarioTotal << endl;
+    
+    return 0;
+}
+
+
+
+
+[02:57, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string nome;
+    char sexo;
+    double altura, pesoIdeal;
+    
+    cout << "Digite o nome: ";
+    cin >> nome;
+    cout << "Digite a altura (em metros): ";
+    cin >> altura;
+    cout << "Digite o sexo (M/F): ";
+    cin >> sexo;
+    
+    if (sexo == 'M' || sexo == 'm') {
+        pesoIdeal = (72.7 * altura) - 58;
+    } else if (sexo == 'F' || sexo == 'f') {
+        pesoIdeal = (62.1 * altura) - 44.7;
+    } else {
+        cout << "Sexo inválido!" << endl;
+        return 1;
+    }
+    
+    cout << "Peso ideal de " << nome << ": " << pesoIdeal << " kg" << endl;
+    
+    return 0;
+}
+
+
+
+[02:58, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double salarioFixo, valorVendas, salarioTotal;
+    
+    cout << "Digite o salário fixo: R$";
+    cin >> salarioFixo;
+    cout << "Digite o valor das vendas: R$";
+    cin >> valorVendas;
+    
+    if (valorVendas <= 1500) {
+        salarioTotal = salarioFixo + (valorVendas * 0.03);
+    } else {
+        salarioTotal = salarioFixo + (1500 * 0.03) + ((valorVendas - 1500) * 0.05);
+    }
+    
+    cout << "Salário total: R$" << salarioTotal << endl;
+    
+    return 0;
+}
+
+
+[02:58, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeroConta;
+    double saldo, debito, credito, saldoAtual;
+    
+    cout << "Digite o número da conta: ";
+    cin >> numeroConta;
+    cout << "Digite o saldo: R$";
+    cin >> saldo;
+    cout << "Digite o valor do débito: R$";
+    cin >> debito;
+    cout << "Digite o valor do crédito: R$";
+    cin >> credito;
+    
+    saldoAtual = saldo - debito + credito;
+    
+    cout << "Saldo atual: R$" << saldoAtual << endl;
+    
+    if (saldoAtual >= 0) {
+        cout << "Saldo Positivo" << endl;
+    } else {
+        cout << "Saldo Negativo" << endl;
+    }
+    
+    return 0;
+}
+
+
+[02:59, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int quantidadeAtual, quantidadeMaxima, quantidadeMinima, quantidadeMedia;
+    
+    cout << "Digite a quantidade atual em estoque: ";
+    cin >> quantidadeAtual;
+    cout << "Digite a quantidade máxima em estoque: ";
+    cin >> quantidadeMaxima;
+    cout << "Digite a quantidade mínima em estoque: ";
+    cin >> quantidadeMinima;
+    
+    quantidadeMedia = (quantidadeMaxima + quantidadeMinima) / 2;
+    
+    if (quantidadeAtual >= quantidadeMedia) {
+        cout << "Não efetuar compra" << endl;
+    } else {
+        cout << "Efetuar compra" << endl;
+    }
+    
+    return 0;
+}
+
+
+
+[02:59, 29/08/2024] Pedro Amaral: 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int quantidadeAtual, quantidadeMaxima, quantidadeMinima, quantidadeMedia;
+    
+    cout << "Digite a quantidade atual em estoque: ";
+    cin >> quantidadeAtual;
+    cout << "Digite a quantidade máxima em estoque: ";
+    cin >> quantidadeMaxima;
+    cout << "Digite a quantidade mínima em estoque: ";
+    cin >> quantidadeMinima;
+    
+    quantidadeMedia = (quantidadeMaxima + quantidadeMinima) / 2;
+    
+    if (quantidadeAtual >= quantidadeMedia) {
+        cout << "Não efetuar compra" << endl;
+    } else {
+        cout << "Efetuar compra" << endl;
+    }
+    
+    return 0;
+}

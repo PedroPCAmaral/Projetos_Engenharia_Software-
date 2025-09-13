@@ -1,0 +1,343 @@
+[14:11, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int valor1, valor2;
+
+    imprimir("Informe o primeiro valor: ");
+    ler(valor1);
+
+    imprimir("Informe o segundo valor: ");
+    ler(valor2);
+
+    while (valor2 == 0) {
+        imprimir("VALOR INVÁLIDO! O segundo valor não pode ser zero. Informe outro valor: ");
+        ler(valor2);
+    }
+
+    int resultado = valor1 / valor2;
+    imprimir("Resultado da divisão: ");
+    imprimir(resultado);
+    imprimir("\n");
+
+    return 0;
+}
+[14:11, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int valor1, valor2;
+
+    imprimir("Informe o primeiro valor: ");
+    ler(valor1);
+
+    do {
+        imprimir("Informe o segundo valor: ");
+        ler(valor2);
+
+        if (valor2 == 0) {
+            imprimir("VALOR INVÁLIDO! O segundo valor não pode ser zero.\n");
+        }
+    } while (valor2 == 0);
+
+    int resultado = valor1 / valor2;
+    imprimir("Resultado da divisão: ");
+    imprimir(resultado);
+    imprimir("\n");
+
+    return 0;
+}
+[14:25, 06/09/2024] Pedro Amaral: Ex 1
+[14:25, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int valor1, valor2;
+
+    imprimir("Informe o primeiro valor: ");
+    ler(valor1);
+
+    imprimir("Informe o segundo valor: ");
+    ler(valor2);
+
+    while (valor2 == 0) {
+        imprimir("VALOR INVÁLIDO! O segundo valor não pode ser zero. Informe outro valor: ");
+        ler(valor2);
+    }
+
+    int resultado = valor1 / valor2;
+    imprimir("Resultado da divisão: ");
+    imprimir(resultado);
+    imprimir("\n");
+
+    return 0;
+}
+[14:25, 06/09/2024] Pedro Amaral: Ex 2
+[14:26, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int valor1, valor2;
+
+    imprimir("Informe o primeiro valor: ");
+    ler(valor1);
+
+    do {
+        imprimir("Informe o segundo valor: ");
+        ler(valor2);
+
+        if (valor2 == 0) {
+            imprimir("VALOR INVÁLIDO! O segundo valor não pode ser zero.\n");
+        }
+    } while (valor2 == 0);
+
+    int resultado = valor1 / valor2;
+    imprimir("Resultado da divisão: ");
+    imprimir(resultado);
+    imprimir("\n");
+
+    return 0;
+}
+[14:26, 06/09/2024] Pedro Amaral: Ex3 fazer
+[14:26, 06/09/2024] Pedro Amaral: Ex 4 fazer
+[14:26, 06/09/2024] Pedro Amaral: Ex 5
+[14:26, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    float nota1, nota2;
+
+    imprimir("Informe a primeira nota (0 a 10): ");
+    ler(nota1);
+
+    while (nota1 < 0 || nota1 > 10) {
+        imprimir("Nota inválida! Informe a primeira nota (0 a 10): ");
+        ler(nota1);
+    }
+
+    imprimir("Informe a segunda nota (0 a 10): ");
+    ler(nota2);
+
+    while (nota2 < 0 || nota2 > 10) {
+        imprimir("Nota inválida! Informe a segunda nota (0 a 10): ");
+        ler(nota2);
+    }
+
+    float media = (nota1 + nota2) / 2;
+    imprimir("Média: ");
+    imprimir(media);
+    imprimir("\n");
+
+    return 0;
+}
+[14:27, 06/09/2024] Pedro Amaral: Ex 6
+[14:27, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    char continuar;
+    
+    do {
+        float nota1, nota2;
+
+        imprimir("Informe a primeira nota (0 a 10): ");
+        ler(nota1);
+
+        while (nota1 < 0 || nota1 > 10) {
+            imprimir("Nota inválida! Informe a primeira nota (0 a 10): ");
+            ler(nota1);
+        }
+
+        imprimir("Informe a segunda nota (0 a 10): ");
+        ler(nota2);
+
+        while (nota2 < 0 || nota2 > 10) {
+            imprimir("Nota inválida! Informe a segunda nota (0 a 10): ");
+            ler(nota2);
+        }
+
+        float media = (nota1 + nota2) / 2;
+        imprimir("Média: ");
+        imprimir(media);
+        imprimir("\n");
+
+        imprimir("Deseja realizar um novo cálculo? (S/N): ");
+        std::cin >> continuar;
+
+    } while (continuar == 'S' || continuar == 's');
+
+    return 0;
+}
+[14:27, 06/09/2024] Pedro Amaral: Ex 7
+[14:27, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        imprimir(i);
+        imprimir(" ");
+    }
+    imprimir("\n");
+
+    return 0;
+}
+[14:28, 06/09/2024] Pedro Amaral: Ex8
+[14:28, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    for (int i = 10; i >= 1; i--) {
+        imprimir(i);
+        imprimir(" ");
+    }
+    imprimir("\n");
+
+    return 0;
+}
+[14:28, 06/09/2024] Pedro Amaral: Ex9
+[14:28, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    for (int i = 101; i <= 110; i++) {
+        imprimir(i);
+        imprimir(" ");
+    }
+    imprimir("\n");
+
+    return 0;
+}
+[14:28, 06/09/2024] Pedro Amaral: Ex10
+[14:29, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int N;
+
+    imprimir("Informe um valor para N: ");
+    ler(N);
+
+    for (int i = 1; i <= N; i++) {
+        imprimir(i);
+        imprimir(" ");
+    }
+    imprimir("\n");
+
+    return 0;
+}
+[14:29, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int N;
+
+    do {
+        imprimir("Informe um valor positivo para N: ");
+        ler(N);
+    } while (N <= 0);
+
+    for (int i = 1; i <= N; i++) {
+        imprimir(i);
+        imprimir(" ");
+    }
+    imprimir("\n");
+
+    return 0;
+}
+[14:30, 06/09/2024] Pedro Amaral: Ex 12
+[14:30, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    for (int i = 1; i <= 10; i++) {
+        imprimir("8 x ");
+        imprimir(i);
+        imprimir(" = ");
+        imprimir(8 * i);
+        imprimir("\n");
+    }
+
+    return 0;
+}
+[14:30, 06/09/2024] Pedro Amaral: Ex 13
+[14:30, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int N;
+
+    imprimir("Informe o número de linhas para o triângulo: ");
+    ler(N);
+
+    for (int i = N; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            imprimir("*");
+        }
+        imprimir("\n");
+    }
+
+    return 0;
+}
+[14:30, 06/09/2024] Pedro Amaral: Ex 14
+[14:31, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int N;
+
+    imprimir("Informe o número de linhas para o triângulo: ");
+    ler(N);
+
+    for (int i = N; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            imprimir("*");
+        }
+        imprimir("\n");
+    }
+
+    return 0;
+}
+[14:31, 06/09/2024] Pedro Amaral: Ex 15
+[14:31, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int soma = 0;
+    int quantidade = 0;
+
+    for (int i = 15; i <= 100; i++) {
+        soma += i;
+        quantidade++;
+    }
+
+    float media = (float)soma / quantidade;
+    imprimir("Média: ");
+    imprimir(media);
+    imprimir("\n");
+
+    return 0;
+}
+[14:31, 06/09/2024] Pedro Amaral: Ex16
+[14:31, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    int quantidade;
+    float valor_total = 0.0;
+
+    imprimir("Informe a quantidade de mercadorias em estoque: ");
+    ler(quantidade);
+
+    for (int i = 1; i <= quantidade; i++) {
+        float valor;
+        imprimir("Informe o valor da mercadoria ");
+        imprimir(i);
+        imprimir(": ");
+        ler(valor);
+        valor_total += valor;
+    }
+
+    float media = valor_total / quantidade;
+    imprimir("Valor total: ");
+    imprimir(valor_total);
+    imprimir("\nMédia dos valores: ");
+    imprimir(media);
+    imprimir("\n");
+
+    return 0;
+}
+[14:32, 06/09/2024] Pedro Amaral: Ex 17
+[14:32, 06/09/2024] Pedro Amaral: #include "studio.h"
+
+int main() {
+    char mais_mercadorias;
+    float valor_total = 0.0;
+    int quantidade = 0;
+
+    do {
+        float valor;
+        imprimir("Informe

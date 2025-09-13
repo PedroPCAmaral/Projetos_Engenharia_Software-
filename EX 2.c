@@ -1,31 +1,16 @@
 #include <stdio.h>
-#include <locale.h>
+#include <math.h>
+
+float distEuclidiana(float x1, float y1, float x2, float y2) {
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
 
 
 int main() {
-	
-	setlocale(LC_ALL, "Portuguese");
-	
-    int valor1, valor2;
+    float x1 = 1.0, y1 = 2.0, x2 = 4.0, y2 = 6.0;
+    printf("A distancia euclidiana e: %.2f\n", distEuclidiana(x1, y1, x2, y2));
     
-    
-
-    printf("Digite o primeiro valor: ");
-    scanf("%d", &valor1);
-
-    do {
-        printf("Digite o segundo valor: ");
-        scanf("%d", &valor2);
-        
-
-        if (valor2 == 0) {
-            printf("VALOR INVALIDO! O segundo valor nao pode ser zero.\n");
-        }
-        
-    } while (valor2 == 0);
-
-    int resultado = valor1 / valor2;
-    printf("Resultado da divisao: %d\n", resultado);
-
-    return 0;
+	
+	return 0;
 }
+

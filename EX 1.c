@@ -1,29 +1,12 @@
-
-	
 #include <stdio.h>
-#include <locale.h>
+
+int menor(int a, int b) {
+    return (a < b) ? a : b;
+}
 
 int main() {
-    int valor1, valor2;
+    int a = 20, b = 100;
+    printf("O menor numero e: %d\n", menor(a, b));
     
-	
-	setlocale(LC_ALL, "Portuguese");
-	
-	
-
-    printf("Digite o primeiro valor: ");
-    scanf("%d", &valor1);
-
-    printf("Digite o segundo valor: ");
-    scanf("%d", &valor2);
-
-    while (valor2 == 0) {
-        printf("VALOR INVALIDO! O segundo valor nao pode ser iguala zero. Informe outro valor: ");
-        scanf("%d", &valor2);
-    }
-
-    int resultado = valor1 / valor2;
-    printf("Resultado da divisao: %d\n", resultado);
-
-    return 0;
+	return 0;
 }

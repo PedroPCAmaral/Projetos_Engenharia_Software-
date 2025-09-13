@@ -1,0 +1,582 @@
+2
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int Q[20];
+    int maior, posicao;
+
+    srand(time(0));
+
+    // Gera o vetor com números aleatórios positivos
+    for (int i = 0; i < 20; i++) {
+        Q[i] = rand() % 100 + 1; // Número entre 1 e 100
+    }
+
+    maior = Q[0];
+    posicao = 0;
+
+    // Encontrar o maior elemento
+    for (int i = 1; i < 20; i++) {
+        if (Q[i] > maior) {
+            maior = Q[i];
+            posicao = i;
+        }
+    }
+
+    printf("Maior elemento: %d na posição %d\n", maior, posicao);
+    return 0;
+}
+
+
+
+3
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int Q[20];
+    int menor, posicao;
+
+    srand(time(0));
+
+    // Gera o vetor com números aleatórios positivos
+    for (int i = 0; i < 20; i++) {
+        Q[i] = rand() % 100 + 1; // Número entre 1 e 100
+    }
+
+    menor = Q[0];
+    posicao = 0;
+
+    // Encontrar o menor elemento
+    for (int i = 1; i < 20; i++) {
+        if (Q[i] < menor) {
+            menor = Q[i];
+            posicao = i;
+        }
+    }
+
+    printf("Menor elemento: %d na posição %d\n", menor, posicao);
+    return 0;
+}
+
+
+
+
+
+4
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int A[10], M[10];
+    int X;
+
+    srand(time(0));
+
+    // Gera o vetor A com números aleatórios
+    for (int i = 0; i < 10; i++) {
+        A[i] = rand() % 10 + 1; // Número entre 1 e 10
+    }
+
+    X = rand() % 10 + 1; // X entre 1 e 10
+
+    // Multiplicação e armazenamento em M
+    for (int i = 0; i < 10; i++) {
+        M[i] = A[i] * X;
+    }
+
+    // Impressão do vetor M
+    printf("Vetor A: ");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", A[i]);
+    }
+    printf("\nValor de X: %d\n", X);
+    
+    printf("Vetor M: ");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", M[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+
+5
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int numeros[20];
+
+    srand(time(0));
+
+    // Gera 20 números aleatórios
+    for (int i = 0; i < 20; i++) {
+        numeros[i] = rand() % 100 + 1; // Número entre 1 e 100
+    }
+
+    // Impressão na ordem inversa
+    printf("Números na ordem inversa: ");
+    for (int i = 19; i >= 0; i--) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+6
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int N = 5; // Tamanho fixo para simplicidade
+    int A[N], B[N], Soma[N];
+
+    srand(time(0));
+
+    // Gera o vetor A
+    printf("Vetor A:\n");
+    for (int i = 0; i < N; i++) {
+        A[i] = rand() % 100 + 1; // Número entre 1 e 100
+        printf("%d ", A[i]);
+    }
+    printf("\n");
+
+    // Gera o vetor B
+    printf("Vetor B:\n");
+    for (int i = 0; i < N; i++) {
+        B[i] = rand() % 100 + 1; // Número entre 1 e 100
+        printf("%d ", B[i]);
+    }
+    printf("\n");
+
+    // Soma dos vetores
+    for (int i = 0; i < N; i++) {
+        Soma[i] = A[i] + B[i];
+    }
+
+    // Impressão do vetor Soma
+    printf("Vetor Soma: ");
+    for (int i = 0; i < N; i++) {
+        printf("%d ", Soma[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+7
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    float temperaturas[365];
+    float soma = 0, media;
+    int dias_inferior_media = 0, menor, maior;
+
+    srand(time(0));
+
+    // Gera as temperaturas aleatórias
+    for (int i = 0; i < 365; i++) {
+        temperaturas[i] = (float)(rand() % 351) / 10; // Temperatura entre 0.0 e 35.0
+        soma += temperaturas[i];
+    }
+
+    media = soma / 365;
+    menor = temperaturas[0];
+    maior = temperaturas[0];
+
+    // Encontrar menor e maior temperatura
+    for (int i = 0; i < 365; i++) {
+        if (temperaturas[i] < menor) {
+            menor = temperaturas[i];
+        }
+        if (temperaturas[i] > maior) {
+            maior = temperaturas[i];
+        }
+        if (temperaturas[i] < media) {
+            dias_inferior_media++;
+        }
+    }
+
+    printf("Menor temperatura: %.2f\n", menor);
+    printf("Maior temperatura: %.2f\n", maior);
+    printf("Temperatura média anual: %.2f\n", media);
+    printf("Dias com temperatura inferior à média: %d\n", dias_inferior_media);
+
+    return 0;
+}
+
+
+
+8
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void bubble_sort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Troca
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int numeros[10];
+
+    srand(time(0));
+
+    // Gera os números aleatórios
+    for (int i = 0; i < 10; i++) {
+        numeros[i] = rand() % 100 + 1; // Número entre 1 e 100
+    }
+
+    // Ordenação
+    bubble_sort(numeros, 10);
+
+    // Impressão do vetor ordenado
+    printf("Vetor ordenado: ");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", numeros[i]);
+    }
+   
+
+
+9
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void inserir_ordenado(int arr[], int *n, int novo_numero) {
+    int i;
+    for (i = *n - 1; (i >= 0 && arr[i] > novo_numero); i--) {
+        arr[i + 1] = arr[i];
+    }
+    arr[i + 1] = novo_numero;
+    (*n)++;
+}
+
+int main() {
+    int numeros[11]; // 10 números mais o novo número
+    int novo_numero;
+    int n = 10;
+
+    srand(time(0));
+
+    // Gera os números aleatórios e ordena
+    for (int i = 0; i < n; i++) {
+        numeros[i] = rand() % 100 + 1; // Número entre 1 e 100
+    }
+
+    // Ordenação inicial
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (numeros[j] > numeros[j + 1]) {
+                // Troca
+                int temp = numeros[j];
+                numeros[j] = numeros[j + 1];
+                numeros[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("Vetor original: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\n");
+
+    novo_numero = rand() % 100 + 1; // Número aleatório entre 1 e 100
+    printf("Número a ser inserido: %d\n", novo_numero);
+
+    inserir_ordenado(numeros, &n, novo_numero);
+
+    // Impressão do vetor após a inserção
+    printf("Vetor após inserção: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+10
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int numeros[20];
+    int novo_numero;
+    int novo_vetor[20];
+    int n = 0;
+
+    srand(time(0));
+
+    // Gera 20 números aleatórios
+    for (int i = 0; i < 20; i++) {
+        numeros[i] = rand() % 100 + 1; // Número entre 1 e 100
+    }
+
+    // Escolhe um novo número
+    novo_numero = rand() % 100 + 1; // Número entre 1 e 100
+    printf("Números no vetor: ");
+    for (int i = 0; i < 20; i++) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\nNúmero a ser verificado: %d\n", novo_numero);
+
+    // Verifica se o número existe no vetor
+    for (int i = 0; i < 20; i++) {
+        if (numeros[i] != novo_numero) {
+            novo_vetor[n++] = numeros[i];
+        }
+    }
+
+    if (n < 20) {
+        printf("Número %d encontrado e removido.\n", novo_numero);
+    } else {
+        printf("Número %d não encontrado.\n", novo_numero);
+    }
+
+    // Impressão do novo vetor
+    printf("Novo vetor: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", novo_vetor[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+11
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int V1[15], V2[15];
+    int contador = 0;
+
+    srand(time(0));
+
+    // Gera os vetores V1 e V2 com números aleatórios
+    printf("Vetor V1:\n");
+    for (int i = 0; i < 15; i++) {
+        V1[i] = rand() % 100 + 1; // Número entre 1 e 100
+        printf("%d ", V1[i]);
+    }
+    printf("\n");
+
+    printf("Vetor V2:\n");
+    for (int i = 0; i < 15; i++) {
+        V2[i] = rand() % 100 + 1; // Número entre 1 e 100
+        printf("%d ", V2[i]);
+    }
+    printf("\n");
+
+    // Contar elementos iguais nas mesmas posições
+    for (int i = 0; i < 15; i++) {
+        if (V1[i] == V2[i]) {
+            contador++;
+        }
+    }
+
+    printf("Quantidade de números iguais nas mesmas posições: %d\n", contador);
+
+    return 0;
+}
+
+
+
+
+12
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int numeros[30];
+    int numero_procurado, contador = 0;
+
+    srand(time(0));
+
+    // Gera 30 números aleatórios
+    for (int i = 0; i < 30; i++) {
+        numeros[i] = rand() % 100 + 1; // Número entre 1 e 100
+    }
+
+    // Escolhe um número para procurar
+    numero_procurado = rand() % 100 + 1; // Número entre 1 e 100
+    printf("Números no vetor: ");
+    for (int i = 0; i < 30; i++) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\nNúmero procurado: %d\n", numero_procurado);
+
+    // Contar ocorrências do número procurado
+    for (int i = 0; i < 30; i++) {
+        if (numeros[i] == numero_procurado) {
+            contador++;
+        }
+    }
+
+    printf("O número %d aparece %d vez(es) no vetor.\n", numero_procurado, contador);
+
+    return 0;
+}
+
+
+
+
+13
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int VET[50];
+    int repetido;
+
+    srand(time(0));
+
+    // Gera 50 números aleatórios
+    for (int i = 0; i < 50; i++) {
+        VET[i] = rand() % 100 + 1; // Número entre 1 e 100
+    }
+
+    printf("Vetor:\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%d ", VET[i]);
+    }
+    printf("\n");
+
+    printf("Números repetidos e suas posições:\n");
+    for (int i = 0; i < 50; i++) {
+        repetido = VET[i];
+        int encontrado = 0;
+        for (int j = i + 1; j < 50; j++) {
+            if (VET[j] == repetido) {
+                encontrado = 1;
+                break;
+            }
+        }
+        if (encontrado) {
+            printf("Número %d encontrado nas posições: ", repetido);
+            for (int j = 0; j < 50; j++) {
+                if (VET[j] == repetido) {
+                    printf("%d ", j);
+                }
+            }
+            printf("\n");
+            // Remove repetidos do vetor
+            for (int k = i + 1; k < 50; k++) {
+                if (VET[k] == repetido) {
+                    for (int m = k; m < 49; m++) {
+                        VET[m] = VET[m + 1];
+                    }
+                    i--; // Decrementa o índice para não pular o próximo elemento
+                    break;
+                }
+            }
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+14
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int matriz[3][3];
+    int determinante;
+
+    srand(time(0));
+
+    // Gera a matriz 3x3 com números aleatórios
+    printf("Matriz 3x3:\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            matriz[i][j] = rand() % 10; // Números entre 0 e 9
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Cálculo do determinante
+    determinante = matriz[0][0] * (matriz[1][1] * matriz[2][2] - matriz[1][2] * matriz[2][1]) -
+                   matriz[0][1] * (matriz[1][0] * matriz[2][2] - matriz[1][2] * matriz[2][0]) +
+                   matriz[0][2] * (matriz[1][0] * matriz[2][1] - matriz[1][1] * matriz[2][0]);
+
+    printf("Determinante da matriz: %d\n", determinante);
+
+    return 0;
+}
+
+
+
+

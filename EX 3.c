@@ -1,20 +1,21 @@
- #include <stdio.h>
- 
- 
-
-int potencia(int base, int expoente) {
-    int resultado = 1;
-    for (int i = 0; i < expoente; i++) {
-        resultado *= base;
-    }
-    return resultado;
-}
+#include <stdio.h>
+#include <string.h>
 
 int main() {
-    int base = 3, expoente = 4;
-    printf("O resultado de %d^%d é:%d\n", base, expoente, potencia(base, expoente));
-    
-	
-	return 0;
-}
+    char str[100];
 
+    printf("Informe uma string: ");
+    
+	fgets(str, sizeof(str), stdin);
+    
+	str[strcspn(str, "\n")] = '\0'; 
+
+    printf("String de tras para frente: ");
+    
+	for (int i = strlen(str) - 1; i >= 0; i--) {
+        putchar(str[i]);
+    }
+    putchar('\n');
+
+    return 0;
+}
